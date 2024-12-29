@@ -8,6 +8,11 @@ body {
 	margin: 0;
 }
 
+html {
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+}
+
 :root {
 	--font-family: "Roboto Condensed", serif;
 	font-optical-sizing: auto;
@@ -160,6 +165,9 @@ main {
 	& .container-section > h2 {
 		color: white;
 	}
+	#scroll1:hover {
+		background: none;
+	}
 }
 
 #Light {
@@ -307,12 +315,33 @@ main {
 			rgba(245, 245, 245, 0.02) 80%,
 			rgba(140, 140, 140, 0.02) 80%,
 			rgba(140, 140, 140, 0.02) 100%
-		), linear-gradient(90deg, rgb(213, 213, 213), rgb(213, 213, 213));
+		), linear-gradient(90deg, rgb(223, 223, 223), rgb(220, 216, 216));
 
 	& .title {
 		color: black;
 	}
-	& .scrol-list section > div {
-		background-color: black;
+	& .scroll-list section > a > div {
+		background-color: rgb(0, 0, 0);
 	}
+	#scroll1:hover {
+		background: none;
+	}
+	& .container-profil {
+		background-color: rgb(105, 105, 105);
+	}
+	#scroll1:hover::after {
+		color: black;
+	}
+}
+
+/*  * Style de scroll bar */
+
+& ::-webkit-scrollbar {
+	width: 10px;
+	background: #0c0b0bad;
+}
+::-webkit-scrollbar-thumb {
+	border: solid 0 transparent;
+	background-color: #ffffff;
+	border-radius: 10px 0px 0px 10px;
 }

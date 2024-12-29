@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../../style/accueil.css";
 import "../../style/global.css";
+import Profil from "./Profil";
 
 function Accueil() {
 	const [theme, setTheme] = useState("Light");
@@ -24,18 +25,25 @@ function Accueil() {
 					<span className="slider">.</span>
 				</label>
 			</section>
-			<section className="scrol-list">
+			<section className="scroll-list">
 				<section>
-					<div>-</div>
-					<div>-</div>
-					<div>-</div>
+					<a href="#profil">
+						<div id="scroll1">-</div>
+					</a>
+					<a href="2">
+						<div id="scroll2">-</div>
+					</a>
+					<a href="3">
+						<div id="scroll3">-</div>
+					</a>
 				</section>
 			</section>
-			<section className="container-section">
+			<section id="profil" className="container-section">
 				<section>.</section>
-				<h2>Profile</h2>
+				<h2>Profil</h2>
 				<section className="second">.</section>
 			</section>
+			<Profil />
 		</main>
 	);
 }
