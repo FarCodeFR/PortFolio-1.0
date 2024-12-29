@@ -24,6 +24,18 @@ function Accueil() {
 					<span className="slider">.</span>
 				</label>
 			</section>
+			<section className="scrol-list">
+				<section>
+					<div>-</div>
+					<div>-</div>
+					<div>-</div>
+				</section>
+			</section>
+			<section className="container-section">
+				<section>.</section>
+				<h2>Profile</h2>
+				<section className="second">.</section>
+			</section>
 		</main>
 	);
 }
