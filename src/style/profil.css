@@ -1,0 +1,79 @@
+/* * Container profil */
+
+.container-profil {
+	background-color: rgba(100, 98, 98, 0.607);
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px
+		2px 6px 2px;
+	border-radius: 10px;
+	width: 70%;
+	margin: 0 auto;
+	padding: 2rem;
+	display: flex;
+	margin-top: 10em;
+}
+
+/* * image */
+
+.container-profil > picture {
+	width: 140vw;
+}
+
+.container-profil > picture > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 15px;
+}
+
+/* * Text profil */
+
+.container-text-profil {
+	margin-left: 3em;
+	font-family: var(--font-family);
+}
+
+.container-text-profil > h2 {
+	font-size: 32px;
+	font-style: italic;
+	margin-bottom: 0;
+}
+
+.container-text-profil > p:first-of-type {
+	margin-top: 10px;
+	word-spacing: 2px;
+	font-size: 20px;
+	font-style: italic;
+}
+
+.container-text-profil > p {
+	margin-top: 3em;
+	font-size: 16px;
+	width: 90%;
+	text-align: justify;
+}
+
+/* * container-link */
+
+.container-link {
+	display: flex;
+	justify-content: right;
+	align-items: end;
+	gap: 20px;
+	width: 100%;
+	height: 100px;
+}
+
+.container-link > a {
+	width: 80px;
+	height: 80px;
+	border-radius: 20px;
+	border: solid black 2px;
+	background-color: white;
+	padding: 5px;
+}
+
+.container-link > a > img {
+	width: 100%;
+	object-fit: cover;
+	border-radius: 17px;
+}
