@@ -9,9 +9,34 @@
 	font-family: var(--font-family);
 }
 
+/* * Scrol List */
+
+.scrol-list {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	padding: 30px;
+	line-height: 70px;
+	margin-bottom: 50%;
+}
+
+.scrol-list > section {
+	list-style: none;
+	font-size: 0;
+	position: fixed;
+}
+
+.scrol-list section > div {
+	width: 40px;
+	height: 6px;
+	margin-top: 60px;
+	border-radius: 10px;
+	background-color: rgb(255, 255, 255);
+}
+
 /* * Toggle Switch */
 .container-toggle {
-	position: fixed;
+	position: absolute;
 	top: 5%;
 	right: 5%;
 	display: flex;
@@ -20,8 +45,8 @@
 .toggle-switch {
 	display: inline-block;
 	position: relative;
-	width: 200px;
-	height: 80px;
+	width: 100px;
+	height: 40px;
 }
 
 .toggle-switch input {
@@ -49,10 +74,10 @@
 	align-content: center;
 	font-family: var(--font-family);
 	color: white;
-	height: 73px;
-	width: 73px;
+	height: 35px;
+	width: 35px;
 	left: 4px;
-	bottom: 4px;
+	bottom: 3px;
 	background-color: rgb(0, 0, 0);
 	-webkit-transition: .4s;
 	transition: .4s;
@@ -63,7 +88,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-	transform: translateX(120px);
+	transform: translateX(57px);
 	background-color: rgb(237, 237, 237);
 	content: "Light";
 	color: black;
@@ -75,4 +100,36 @@ input:checked + .slider:before {
 
 .slider:before {
 	border-radius: 50%;
+}
+
+/* * Section Style */
+
+.container-section {
+	display: flex;
+	margin: 0 auto;
+	width: 80%;
+	border-top: solid 4px #000000;
+}
+
+.container-section > section:first-of-type {
+	margin-top: 30px;
+	width: 70%;
+	font-size: 0;
+	border-top: solid 4px black;
+}
+
+.container-section > h2 {
+	font-size: 32px;
+	margin: 10px 0 0 30px;
+	font-family: var(--font-family);
+	font-style: italic;
+}
+
+.container-section > .second {
+	position: absolute;
+	border-top: solid 4px black;
+	width: 60%;
+	margin-top: 60px;
+	font-size: 0;
+	margin-left: 10%;
 }
