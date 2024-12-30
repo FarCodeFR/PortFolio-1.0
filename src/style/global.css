@@ -156,13 +156,22 @@ main {
 			rgba(57, 57, 57, 0.01) 100%
 		), linear-gradient(90deg, hsl(237, 0%, 13%), hsl(237, 0%, 13%));
 	color: white;
-	& .container-section {
+	& .container-section-profil {
 		border-top: solid 4px white;
 	}
-	& .container-section > section {
+	& .container-section-profil > section {
 		border-top: solid 4px white;
 	}
-	& .container-section > h2 {
+	& .container-section-profil > h2 {
+		color: white;
+	}
+	& .container-section-projects {
+		border-top: solid 4px white;
+	}
+	& .container-section-projects > section {
+		border-top: solid 4px white;
+	}
+	& .container-section-projects > h2 {
 		color: white;
 	}
 	#scroll1:hover {

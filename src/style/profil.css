@@ -10,12 +10,13 @@
 	padding: 2rem;
 	display: flex;
 	margin-top: 10em;
+	margin-bottom: 20em;
 }
 
 /* * image */
 
 .container-profil > picture {
-	width: 140vw;
+	width: 100%;
 }
 
 .container-profil > picture > img {
@@ -29,18 +30,21 @@
 
 .container-text-profil {
 	margin-left: 3em;
+	width: 100%;
 	font-family: var(--font-family);
 }
 
 .container-text-profil > h2 {
 	font-size: 32px;
 	font-style: italic;
+	width: 100%;
 	margin-bottom: 0;
 }
 
 .container-text-profil > p:first-of-type {
 	margin-top: 10px;
 	word-spacing: 2px;
+	width: 100%;
 	font-size: 20px;
 	font-style: italic;
 }

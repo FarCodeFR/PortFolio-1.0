@@ -121,30 +121,64 @@ input:checked + .slider:before {
 	border-radius: 50%;
 }
 
-/* * Section Style */
+/* * Section Style Profil */
 
-.container-section {
+.container-section-profil {
 	display: flex;
 	margin: 0 auto;
 	width: 80%;
 	border-top: solid 4px #000000;
 }
 
-.container-section > section:first-of-type {
+.container-section-profil > section:first-of-type {
 	margin-top: 30px;
 	width: 70%;
 	font-size: 0;
 	border-top: solid 4px black;
 }
 
-.container-section > h2 {
+.container-section-profil > h2 {
 	font-size: 32px;
 	margin: 10px 0 0 30px;
 	font-family: var(--font-family);
 	font-style: italic;
 }
 
-.container-section > .second {
+.container-section-profil > .second-ligne-profil {
+	position: absolute;
+	border-top: solid 4px black;
+	width: 60%;
+	margin-top: 60px;
+	font-size: 0;
+	margin-left: 10%;
+}
+
+/* * Section Style Projects */
+
+.container-section-projects {
+	display: flex;
+	margin: 0 auto;
+	width: 80%;
+	border-top: solid 4px #000000;
+}
+
+.container-section-projects > section:first-of-type {
+	margin-top: 30px;
+	width: 100%;
+	margin-left: 30%;
+	font-size: 0;
+	border-top: solid 4px black;
+}
+
+.container-section-projects > h2 {
+	position: absolute;
+	font-size: 32px;
+	margin: 10px 0px 0px 9em;
+	font-family: var(--font-family);
+	font-style: italic;
+}
+
+.container-section-projects > .second-ligne-projects {
 	position: absolute;
 	border-top: solid 4px black;
 	width: 60%;

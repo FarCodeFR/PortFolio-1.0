@@ -38,12 +38,17 @@ function Accueil() {
 					</a>
 				</section>
 			</section>
-			<section id="profil" className="container-section">
+			<section id="profil" className="container-section-profil">
 				<section>.</section>
 				<h2>Profil</h2>
-				<section className="second">.</section>
+				<section className="second-ligne-profil">.</section>
 			</section>
 			<Profil />
+			<section id="projects" className="container-section-projects">
+				<h2>Projects</h2>
+				<section>.</section>
+				<section className="second-ligne-projects">.</section>
+			</section>
 		</main>
 	);
 }
