@@ -2,6 +2,7 @@ import { useState } from "react";
 import "../../style/accueil.css";
 import "../../style/global.css";
 import Profil from "./Profil";
+import CardProjects from "./CardProjects";
 
 function Accueil() {
 	const [theme, setTheme] = useState("Light");
@@ -49,6 +50,7 @@ function Accueil() {
 				<section>.</section>
 				<section className="second-ligne-projects">.</section>
 			</section>
+			<CardProjects />
 		</main>
 	);
 }
