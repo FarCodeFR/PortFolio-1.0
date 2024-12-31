@@ -1,0 +1,20 @@
+[
+	{
+		"id": 1,
+		"name": "Project 1",
+		"title": "Caféothèque",
+		"image": "images/project1.jpg"
+	},
+	{
+		"id": 2,
+		"name": "Project 2",
+		"title": "Good-Vibes",
+		"image": "images/project2.png"
+	},
+	{
+		"id": 3,
+		"name": "Project 3",
+		"title": "Portfolio",
+		"image": "images/project3.jpg"
+	}
+]
