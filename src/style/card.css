@@ -1,8 +1,15 @@
 /* * Container card projects */
 
+.container-placement-cards {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 5em;
+	justify-content: center;
+}
+
 .container-card-projects {
 	width: 30%;
-	margin: 13em 15em;
+	margin: 5em 3em;
 	background-color: rgb(0, 0, 0);
 	box-shadow: 0px 0px 0px 5px rgb(158, 158, 158);
 	border-radius: 10px;
@@ -81,3 +88,15 @@ picture > img {
 }
 
 /* ? Placement Cards + modification color */
+
+#Caféothèque > section:first-of-type {
+	background: rgb(185, 181, 181);
+}
+
+#Good-Vibes > section:first-of-type {
+	background-color: rgb(166, 220, 130);
+}
+
+#Portfolio > section:first-of-type {
+	background-color: rgb(194, 95, 95);
+}
