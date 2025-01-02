@@ -3,6 +3,7 @@ import "../../style/accueil.css";
 import "../../style/global.css";
 import Profil from "./Profil";
 import CardProjects from "./CardProjects";
+import Formulaire from "./Formulaire";
 
 function Accueil() {
 	const [theme, setTheme] = useState("Light");
@@ -23,7 +24,7 @@ function Accueil() {
 						type="checkbox"
 						checked={theme === "Light"}
 					/>
-					<span className="slider">.</span>
+					<span className="slider">&nbsp;</span>
 				</label>
 			</section>
 			<section className="scroll-list">
@@ -31,10 +32,10 @@ function Accueil() {
 					<a href="#profil">
 						<div id="scroll1">-</div>
 					</a>
-					<a href="2">
+					<a href="#projects">
 						<div id="scroll2">-</div>
 					</a>
-					<a href="3">
+					<a href="#formulaire">
 						<div id="scroll3">-</div>
 					</a>
 				</section>
@@ -51,6 +52,12 @@ function Accueil() {
 				<section className="second-ligne-projects">.</section>
 			</section>
 			<CardProjects />
+			<section id="formulaire" className="container-section-formulaire">
+				<section>.</section>
+				<h2>Formulaire</h2>
+				<section className="second-ligne-formulaire">.</section>
+			</section>
+			<Formulaire />
 		</main>
 	);
 }
