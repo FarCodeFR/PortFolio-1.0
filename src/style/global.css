@@ -174,7 +174,22 @@ main {
 	& .container-section-projects > h2 {
 		color: white;
 	}
+	& .container-section-formulaire {
+		border-top: solid 4px white;
+	}
+	& .container-section-formulaire > section {
+		border-top: solid 4px white;
+	}
+	& .container-section-formulaire > h2 {
+		color: white;
+	}
 	#scroll1:hover {
+		background: none;
+	}
+	#scroll2:hover {
+		background: none;
+	}
+	#scroll3:hover {
 		background: none;
 	}
 }
@@ -339,6 +354,24 @@ main {
 		background-color: rgb(105, 105, 105);
 	}
 	#scroll1:hover::after {
+		color: black;
+	}
+	#scroll2:hover {
+		background: none;
+	}
+	& .container-profil {
+		background-color: rgb(105, 105, 105);
+	}
+	#scroll2:hover::after {
+		color: black;
+	}
+	#scroll3:hover {
+		background: none;
+	}
+	& .container-profil {
+		background-color: rgb(105, 105, 105);
+	}
+	#scroll3:hover::after {
 		color: black;
 	}
 }

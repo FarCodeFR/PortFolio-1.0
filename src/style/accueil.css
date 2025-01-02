@@ -26,8 +26,8 @@
 }
 
 .scroll-list section > a > div {
-	width: 40px;
-	height: 6px;
+	width: 60px;
+	height: 10px;
 	margin-top: 60px;
 	border-radius: 10px;
 	background-color: rgb(255, 255, 255);
@@ -42,7 +42,7 @@
 #scroll1:hover::after {
 	content: "Profil";
 	font-family: var(--font-family);
-	font-size: 24px;
+	font-size: 20px;
 	color: white;
 	width: 100%;
 	height: 100%;
@@ -51,7 +51,32 @@
 	justify-content: center;
 }
 
-/* ? Hover 2  */
+/* ? Hover 2 project */
+
+#scroll2:hover::after {
+	content: "Projects";
+	font-family: var(--font-family);
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/* ? Hover 3 formulaire */
+
+#scroll3:hover::after {
+	content: "Formulaire";
+	font-family: var(--font-family);
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
 /* * Toggle Switch */
 .container-toggle {
@@ -181,6 +206,38 @@ input:checked + .slider:before {
 .container-section-projects > .second-ligne-projects {
 	position: absolute;
 	border-top: solid 4px black;
+	width: 60%;
+	margin-top: 60px;
+	font-size: 0;
+	margin-left: 10%;
+}
+
+/* * Section Style Formulaire */
+
+.container-section-formulaire {
+	display: flex;
+	margin: 0 auto;
+	width: 80%;
+	border-top: solid 4px #000000;
+}
+
+.container-section-formulaire > section:first-of-type {
+	margin-top: 30px;
+	width: 70%;
+	font-size: 0;
+	border-top: solid 4px rgb(0, 0, 0);
+}
+
+.container-section-formulaire > h2 {
+	font-size: 32px;
+	margin: 10px 0 0 30px;
+	font-family: var(--font-family);
+	font-style: italic;
+}
+
+.container-section-formulaire > .second-ligne-formulaire {
+	position: absolute;
+	border-top: solid 4px rgb(1, 1, 1);
 	width: 60%;
 	margin-top: 60px;
 	font-size: 0;
