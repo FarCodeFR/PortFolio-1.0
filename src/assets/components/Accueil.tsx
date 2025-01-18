@@ -16,8 +16,9 @@ function Accueil() {
 				to my portfolio
 			</h1>
 			<section className="container-toggle">
-				<label className="toggle-switch">
+				<label htmlFor="theme-toggle" className="toggle-switch">
 					<input
+						id="theme-toggle"
 						onChange={(e) => {
 							setTheme(e.target.checked ? "Light" : "Dark");
 						}}

@@ -16,14 +16,14 @@ form > label {
 	font-family: var(--font-family);
 }
 
-form > #input1 {
+form > #username {
 	width: 200px;
 	height: 30px;
 	border-radius: 5px;
 	border: none;
 	margin-bottom: 40px;
 }
-form > #input2 {
+form > #email {
 	width: 200px;
 	height: 30px;
 	border-radius: 5px;

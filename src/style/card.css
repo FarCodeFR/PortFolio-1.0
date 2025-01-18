@@ -37,6 +37,10 @@
 
 /* * Container Titre et info */
 
+.link-card {
+	text-decoration: none;
+}
+
 .container-card-titre {
 	display: flex;
 	gap: 4%;
@@ -57,7 +61,7 @@
 	overflow: hidden;
 }
 
-.container-card-titre > h3:last-child {
+.container-card-titre > h3:last-of-type {
 	font-size: 25px;
 	width: 50%;
 	color: black;
