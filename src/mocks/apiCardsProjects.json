@@ -3,18 +3,23 @@
 		"id": 1,
 		"name": "Project 1",
 		"title": "Caféothèque",
-		"image": "images/project1.jpg"
+		"image": "images/project1.jpg",
+		"alt": "une représentation d'un site de café",
+		"info": "https://github.com/WildCodeSchool-2024-09/JS-Nantes-P2-Cafeotheque"
 	},
 	{
 		"id": 2,
 		"name": "Project 2",
 		"title": "Good-Vibes",
-		"image": "images/project2.png"
+		"image": "images/project2.png",
+		"alt": "une représentation d'un site de bonne nouvelle",
+		"info": "https://github.com/FarCodeFR/Good-Vibes"
 	},
 	{
 		"id": 3,
 		"name": "Project 3",
-		"title": "Portfolio",
-		"image": "images/project3.jpg"
+		"title": "Casse-croute",
+		"image": "images/project3.jpg",
+		"alt": "une représentation prochainement"
 	}
 ]

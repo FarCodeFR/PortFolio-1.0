@@ -1,10 +1,11 @@
 /* * Container profil */
 
 .container-profil {
-	background-color: rgba(100, 98, 98, 0.607);
+	background-color: rgba(255, 255, 255, 0.571);
 	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px
 		2px 6px 2px;
 	border-radius: 10px;
+	color: black;
 	width: 70%;
 	margin: 0 auto;
 	padding: 2rem;
@@ -17,6 +18,10 @@
 
 .container-profil > picture {
 	width: 100%;
+	opacity: 60%;
+}
+.container-profil > picture:hover {
+	opacity: 100%;
 }
 
 .container-profil > picture > img {
@@ -24,6 +29,7 @@
 	height: 100%;
 	object-fit: cover;
 	border-radius: 15px;
+	opacity: 90%;
 }
 
 /* * Text profil */

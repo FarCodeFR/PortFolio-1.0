@@ -13,11 +13,13 @@ function Formulaire() {
 	};
 
 	return (
-		<form onSubmit={onSubmit}>
-			<h2>Contact</h2>
-			<label htmlFor="username">Nom</label>
+		<form aria-labelledby="form-titre" onSubmit={onSubmit}>
+			<h2 id="form-titre">🚧 Contact 🚧</h2>
+			<label id="formulaire" htmlFor="username">
+				Nom
+			</label>
 			<input
-				id="input1"
+				id="username"
 				type="text"
 				name="username"
 				value={name}
@@ -27,7 +29,7 @@ function Formulaire() {
 			/>
 			<label htmlFor="email">Email</label>
 			<input
-				id="input2"
+				id="email"
 				placeholder="Votre email"
 				type="text"
 				name="email"
@@ -37,6 +39,7 @@ function Formulaire() {
 			/>
 			<label htmlFor="message">Message</label>
 			<textarea
+				id="message"
 				className="message-container"
 				placeholder="Votre Message"
 				name="message"
