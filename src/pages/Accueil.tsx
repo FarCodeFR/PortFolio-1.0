@@ -1,9 +1,9 @@
 import { useState } from "react";
-import "../../style/accueil.css";
-import "../../style/global.css";
-import Profil from "./Profil";
-import CardProjects from "./CardProjects";
-import Formulaire from "./Formulaire";
+import "../styles/global.css";
+import "../styles/global.css";
+import Profile from "../assets/components/Profile";
+import CardProjects from "../assets/components/CardProjects";
+import Formulaire from "../assets/components/Formulaire";
 
 function Accueil() {
 	const [theme, setTheme] = useState("Light");
@@ -46,7 +46,7 @@ function Accueil() {
 				<h2>Profil</h2>
 				<section className="second-ligne-profil">.</section>
 			</section>
-			<Profil />
+			<Profile />
 			<section id="projects" className="container-section-projects">
 				<h2>Projects</h2>
 				<section>.</section>

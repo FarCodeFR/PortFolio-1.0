@@ -1,4 +1,4 @@
-import "../../style/card.css";
+import "../../styles/card.css";
 import data from "../../mocks/apiCardsProjects.json";
 import "../../models/DataModel";
 
@@ -16,12 +16,16 @@ function CardProjects() {
 							<section>
 								<h2>{el.name}</h2>
 							</section>
-							<a className="link-card" href={el.info}>
-								<section className="container-card-titre">
-									<h3>{el.title}</h3>
-									<h3>info</h3>
-								</section>
-							</a>
+
+							<section className="container-card-titre">
+								<h3>
+									<a target="_blanck" className="link-card" href={el.info}>
+										{el.title}
+									</a>
+								</h3>
+								<h3>Voir plus</h3>
+							</section>
+
 							<picture>
 								<img src={el.image} alt={el.alt} />
 							</picture>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../../style/formulaire.css";
+import "../../styles/formulaire.css";
 
 function Formulaire() {
 	const [name, setName] = useState("");
