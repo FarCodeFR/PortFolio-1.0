@@ -62,7 +62,7 @@ function Profil() {
 						>
 							<img src="images/Linkedin.png" alt="images de linkedin" />
 						</a>
-						<a target="_blanck" id="link4" href="mailto:Timothe-44@hotmail.fr">
+						<a id="link4" href="mailto:Timothe-44@hotmail.fr">
 							<img src="images/mail.jpg" alt="images de mail" />
 						</a>
 					</section>
