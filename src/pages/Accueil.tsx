@@ -30,13 +30,13 @@ function Accueil() {
 			</section>
 			<section className="scroll-list">
 				<section>
-					<a href="#profil">
+					<a aria-label="Aller à la section Profil" href="#profil">
 						<div id="scroll1">-</div>
 					</a>
-					<a href="#projects">
+					<a aria-label="Aller à la section Projets" href="#projects">
 						<div id="scroll2">-</div>
 					</a>
-					<a href="#formulaire">
+					<a aria-label="Aller à la section Formulaire" href="#formulaire">
 						<div id="scroll3">-</div>
 					</a>
 				</section>

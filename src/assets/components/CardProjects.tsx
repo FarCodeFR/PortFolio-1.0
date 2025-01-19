@@ -23,7 +23,12 @@ function CardProjects() {
 										{el.title}
 									</a>
 								</h3>
-								<h3>Voir plus</h3>
+
+								<h3>
+									<a target="_blanck" href={el.link}>
+										Voir plus
+									</a>
+								</h3>
 							</section>
 
 							<picture>

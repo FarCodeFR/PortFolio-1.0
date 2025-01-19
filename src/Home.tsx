@@ -4,9 +4,9 @@ import Accueil from "./pages/Accueil";
 
 function Home() {
 	return (
-		<>
+		<main>
 			<Accueil />
-		</>
+		</main>
 	);
 }
 

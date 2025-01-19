@@ -5,7 +5,8 @@
 		"title": "Caféothèque",
 		"image": "images/project1.jpg",
 		"alt": "une représentation d'un site de café",
-		"info": "https://github.com/WildCodeSchool-2024-09/JS-Nantes-P2-Cafeotheque"
+		"info": "https://github.com/WildCodeSchool-2024-09/JS-Nantes-P2-Cafeotheque",
+		"link": "https://www.figma.com/design/j1zXgCJDrcymle18jHVnmY/Untitled?node-id=59-36&t=EwD5xjT92ZKSHX2u-0"
 	},
 	{
 		"id": 2,
@@ -13,13 +14,15 @@
 		"title": "Good-Vibes",
 		"image": "images/project2.png",
 		"alt": "une représentation d'un site de bonne nouvelle",
-		"info": "https://github.com/FarCodeFR/Good-Vibes"
+		"info": "https://github.com/FarCodeFR/Good-Vibes",
+		"link": "https://www.figma.com/design/KmdBlwkHkmAXazYsUDNFAg/Good-Vibes?m=auto&t=MMnpi9ruoWU4q5RZ-6"
 	},
 	{
 		"id": 3,
 		"name": "Project 3",
 		"title": "Casse-croute",
 		"image": "images/project3.jpg",
-		"alt": "une représentation prochainement"
+		"alt": "une représentation prochainement",
+		"link": "https://www.figma.com/design/HrXezqeeadm6YPxjO4fBbt/CASSE-CROUTE?m=auto&t=MMnpi9ruoWU4q5RZ-6"
 	}
 ]

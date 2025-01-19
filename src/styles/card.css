@@ -71,6 +71,10 @@
 	text-align: center;
 	align-content: center;
 	margin-top: 15px;
+	& a {
+		color: rgb(0, 0, 0);
+		text-decoration: none;
+	}
 }
 
 /* * Images */
@@ -104,6 +108,11 @@ picture > img {
 		color: black;
 	}
 }
+#Caféothèque > section > h3:last-of-type:hover {
+	& a {
+		color: rgb(248, 248, 248);
+	}
+}
 
 /* Project 2 */
 
@@ -116,6 +125,11 @@ picture > img {
 		color: black;
 	}
 }
+#Good-Vibes > section > h3:last-of-type:hover {
+	& a {
+		color: rgb(248, 248, 248);
+	}
+}
 
 /* Project 3 */
 
@@ -126,5 +140,10 @@ picture > img {
 	background-color: rgba(255, 238, 213, 1);
 	& a {
 		color: black;
+	}
+}
+#Casse-croute > section > h3:last-of-type:hover {
+	& a {
+		color: rgb(248, 248, 248);
 	}
 }
