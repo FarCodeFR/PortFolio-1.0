@@ -16,7 +16,7 @@ function CardProjects() {
 							<section>
 								<h2>{el.name}</h2>
 							</section>
-							<a className="link-card" href={el.info}>
+							<a target="_blanck" className="link-card" href={el.info}>
 								<section className="container-card-titre">
 									<h3>{el.title}</h3>
 									<h3>info</h3>
