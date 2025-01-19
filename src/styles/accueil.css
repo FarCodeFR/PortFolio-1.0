@@ -1,0 +1,245 @@
+/* * Titre */
+
+.title {
+	font-size: 100px;
+	padding-left: 1.5em;
+	padding-top: 1.5em;
+	color: white;
+	margin: 0 auto;
+	font-family: var(--font-family);
+}
+
+/* * Scrol List */
+
+.scroll-list {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	padding: 30px;
+	line-height: 1.5;
+	margin-bottom: 50%;
+}
+
+.scroll-list > section {
+	font-size: 0;
+	position: fixed;
+}
+
+.scroll-list section > a > div {
+	width: 60px;
+	height: 10px;
+	margin-top: 60px;
+	border-radius: 10px;
+	background-color: rgb(255, 255, 255);
+}
+
+.scroll-list section > a {
+	text-decoration: none;
+}
+
+/* ? Hover 1 profile */
+
+#scroll1:hover::after {
+	content: "Profil";
+	font-family: var(--font-family);
+	font-size: 20px;
+	color: white;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* ? Hover 2 project */
+
+#scroll2:hover::after {
+	content: "Projects";
+	font-family: var(--font-family);
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/* ? Hover 3 formulaire */
+
+#scroll3:hover::after {
+	content: "Formulaire";
+	font-family: var(--font-family);
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* * Toggle Switch */
+.container-toggle {
+	position: fixed;
+	top: 5%;
+	right: 5%;
+	display: flex;
+	justify-content: end;
+}
+.toggle-switch {
+	display: inline-block;
+	position: relative;
+	width: 100px;
+	height: 40px;
+}
+
+.toggle-switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ffffff;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "Dark";
+	text-align: center;
+	align-content: center;
+	font-family: var(--font-family);
+	color: white;
+	height: 35px;
+	width: 35px;
+	left: 4px;
+	bottom: 3px;
+	background-color: rgb(0, 0, 0);
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:checked + .slider {
+	background-color: #000000;
+}
+
+input:checked + .slider:before {
+	transform: translateX(57px);
+	background-color: rgb(237, 237, 237);
+	content: "Light";
+	color: black;
+}
+
+.slider {
+	border-radius: 37px;
+}
+
+.slider:before {
+	border-radius: 50%;
+}
+
+/* * Section Style Profil */
+
+.container-section-profil {
+	display: flex;
+	margin: 0 auto;
+	width: 80%;
+	border-top: solid 4px #000000;
+}
+
+.container-section-profil > section:first-of-type {
+	margin-top: 30px;
+	width: 70%;
+	font-size: 0;
+	border-top: solid 4px black;
+}
+
+.container-section-profil > h2 {
+	font-size: 32px;
+	margin: 10px 0 0 30px;
+	font-family: var(--font-family);
+	font-style: italic;
+}
+
+.container-section-profil > .second-ligne-profil {
+	position: absolute;
+	border-top: solid 4px black;
+	width: 60%;
+	margin-top: 60px;
+	font-size: 0;
+	margin-left: 10%;
+}
+
+/* * Section Style Projects */
+
+.container-section-projects {
+	display: flex;
+	margin: 0 auto;
+	width: 80%;
+	border-top: solid 4px #000000;
+}
+
+.container-section-projects > section:first-of-type {
+	margin-top: 30px;
+	width: 80%;
+	margin-left: 2%;
+	font-size: 0;
+	border-top: solid 4px black;
+}
+
+.container-section-projects > h2 {
+	position: relative;
+	font-size: 32px;
+	margin: 10px 0px 0px 25%;
+	font-family: var(--font-family);
+	font-style: italic;
+}
+
+.container-section-projects > .second-ligne-projects {
+	position: absolute;
+	border-top: solid 4px black;
+	width: 60%;
+	margin-top: 60px;
+	font-size: 0;
+	margin-left: 10%;
+}
+
+/* * Section Style Formulaire */
+
+.container-section-formulaire {
+	display: flex;
+	margin: 0 auto;
+	width: 80%;
+	border-top: solid 4px #000000;
+}
+
+.container-section-formulaire > section:first-of-type {
+	margin-top: 30px;
+	width: 70%;
+	font-size: 0;
+	border-top: solid 4px rgb(0, 0, 0);
+}
+
+.container-section-formulaire > h2 {
+	font-size: 32px;
+	margin: 10px 0 0 30px;
+	font-family: var(--font-family);
+	font-style: italic;
+}
+
+.container-section-formulaire > .second-ligne-formulaire {
+	position: absolute;
+	border-top: solid 4px rgb(1, 1, 1);
+	width: 60%;
+	margin-top: 60px;
+	font-size: 0;
+	margin-left: 10%;
+}

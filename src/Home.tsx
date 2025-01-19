@@ -1,7 +1,13 @@
-import "./home.css";
+import "./styles/global.css";
+import "./styles/accueil.css";
+import Accueil from "./pages/Accueil";
 
-function App() {
-	return <></>;
+function Home() {
+	return (
+		<main>
+			<Accueil />
+		</main>
+	);
 }
 
-export default App;
+export default Home;
