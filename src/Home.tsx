@@ -1,12 +1,12 @@
-import "./style/global.css";
-import "./style/accueil.css";
-import Accueil from "./assets/components/Accueil";
+import "./styles/global.css";
+import "./styles/accueil.css";
+import Accueil from "./pages/Accueil";
 
 function Home() {
 	return (
-		<>
+		<main>
 			<Accueil />
-		</>
+		</main>
 	);
 }
 

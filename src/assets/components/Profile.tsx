@@ -1,6 +1,6 @@
-import "../../style/profil.css";
+import "../../styles/profile.css";
 
-function Profil() {
+function Profile() {
 	const handleDownload = (event: React.MouseEvent) => {
 		event.preventDefault();
 
@@ -72,4 +72,4 @@ function Profil() {
 	);
 }
 
-export default Profil;
+export default Profile;

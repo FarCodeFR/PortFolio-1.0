@@ -37,10 +37,6 @@
 
 /* * Container Titre et info */
 
-.link-card {
-	text-decoration: none;
-}
-
 .container-card-titre {
 	display: flex;
 	gap: 4%;
@@ -57,8 +53,11 @@
 	text-align: center;
 	font-size: 25px;
 	margin-top: 15px;
-	color: white;
 	overflow: hidden;
+	& a {
+		color: white;
+		text-decoration: none;
+	}
 }
 
 .container-card-titre > h3:last-of-type {
@@ -72,6 +71,10 @@
 	text-align: center;
 	align-content: center;
 	margin-top: 15px;
+	& a {
+		color: rgb(0, 0, 0);
+		text-decoration: none;
+	}
 }
 
 /* * Images */
@@ -94,14 +97,53 @@ picture > img {
 
 /* ? Placement Cards + modification color */
 
+/* Project 1 */
+
 #Caféothèque > section:first-of-type {
-	background: rgb(185, 181, 181);
+	background: rgb(185, 183, 181);
 }
+#Caféothèque > section > h3:first-of-type:hover {
+	background: rgb(185, 183, 181);
+	& a {
+		color: black;
+	}
+}
+#Caféothèque > section > h3:last-of-type:hover {
+	& a {
+		color: rgb(248, 248, 248);
+	}
+}
+
+/* Project 2 */
 
 #Good-Vibes > section:first-of-type {
-	background-color: rgb(166, 220, 130);
+	background-color: rgb(245, 177, 118);
+}
+#Good-Vibes > section > h3:first-of-type:hover {
+	background-color: rgb(245, 177, 118);
+	& a {
+		color: black;
+	}
+}
+#Good-Vibes > section > h3:last-of-type:hover {
+	& a {
+		color: rgb(248, 248, 248);
+	}
 }
 
-#Portfolio > section:first-of-type {
-	background-color: rgb(194, 95, 95);
+/* Project 3 */
+
+#Casse-croute > section:first-of-type {
+	background-color: rgba(255, 238, 213, 1);
+}
+#Casse-croute > section > h3:first-of-type:hover {
+	background-color: rgba(255, 238, 213, 1);
+	& a {
+		color: black;
+	}
+}
+#Casse-croute > section > h3:last-of-type:hover {
+	& a {
+		color: rgb(248, 248, 248);
+	}
 }
