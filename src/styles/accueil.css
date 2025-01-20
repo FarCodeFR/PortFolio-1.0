@@ -243,3 +243,12 @@ input:checked + .slider:before {
 	font-size: 0;
 	margin-left: 10%;
 }
+
+/* ? Responsive iphone 14pro max */
+
+@media screen and (max-width: 430px) {
+	.title {
+		font-size: 50px;
+		padding: 40px;
+	}
+}

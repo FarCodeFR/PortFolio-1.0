@@ -4,6 +4,7 @@ form {
 	flex-direction: column;
 	align-items: center;
 	margin: 10em auto;
+	padding: 10px;
 	width: 400px;
 	height: 550px;
 	background-color: rgb(105, 105, 105);
