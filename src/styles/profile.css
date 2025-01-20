@@ -86,3 +86,28 @@
 	object-fit: cover;
 	border-radius: 17px;
 }
+
+/* ? Responsive iphone 14pro max */
+
+@media screen and (max-width: 430px) {
+	.container-profil {
+		flex-direction: column;
+		justify-content: center;
+		padding: 15px;
+		margin: 0 auto;
+		margin-top: 10em;
+		margin-bottom: 10em;
+		width: 90%;
+	}
+	.container-text-profil {
+		margin: 0 auto;
+		justify-items: center;
+	}
+	.container-text-profil > h2 {
+		text-align: center;
+	}
+	.container-text-profil > p:first-of-type {
+		text-align: center;
+		font-size: 13px;
+	}
+}
