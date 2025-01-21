@@ -191,6 +191,9 @@ main {
 	& .container-section-formulaire > h2 {
 		color: white;
 	}
+	.scroll-box {
+		background-color: rgb(168, 168, 168);
+	}
 	#scroll1:hover {
 		background: none;
 	}
@@ -383,6 +386,9 @@ main {
 	}
 	#scroll3:hover::after {
 		color: black;
+	}
+	.scroll-box > h2 {
+		color: rgb(255, 255, 255);
 	}
 }
 
