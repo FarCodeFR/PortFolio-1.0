@@ -351,6 +351,7 @@ main {
 
 	& .title {
 		color: black;
+		font-style: italic;
 	}
 	& .scroll-list section > a > div {
 		background-color: rgb(0, 0, 0);
