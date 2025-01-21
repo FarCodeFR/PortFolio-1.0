@@ -52,8 +52,8 @@
 
 .container-text-profil > p {
 	margin-top: 3em;
-	font-size: 16px;
-	width: 90%;
+	font-size: 17px;
+	padding: 10px;
 	text-align: justify;
 }
 
@@ -103,11 +103,18 @@
 		margin: 0 auto;
 		justify-items: center;
 	}
+	.container-text-profil > p {
+		margin-top: 0em;
+	}
 	.container-text-profil > h2 {
 		text-align: center;
 	}
 	.container-text-profil > p:first-of-type {
-		text-align: center;
-		font-size: 13px;
+		text-align: end;
+		font-size: 24px;
+	}
+	.container-link {
+		gap: 10px;
+		justify-content: center;
 	}
 }

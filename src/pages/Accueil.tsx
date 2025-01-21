@@ -41,6 +41,9 @@ function Accueil() {
 					</a>
 				</section>
 			</section>
+			<header className="scroll-box">
+				<h2>My Portfolio !</h2>
+			</header>
 			<section id="profil" className="container-section-profil">
 				<section>.</section>
 				<h2>Profil</h2>
