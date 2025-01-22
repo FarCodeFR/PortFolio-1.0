@@ -78,6 +78,12 @@
 	justify-content: center;
 }
 
+/* * Header */
+
+.scroll-box > h2 {
+	font-size: 0;
+}
+
 /* * Toggle Switch */
 .container-toggle {
 	position: fixed;
