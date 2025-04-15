@@ -82,7 +82,7 @@ main {
 		color: white;
 	}
 	.scroll-box {
-		background-color: rgb(168, 168, 168);
+		background-color: #00bd74;
 	}
 	#scroll1:hover {
 		background: none;
