@@ -1,7 +1,8 @@
 /* * Container profil */
 
 .container-profil {
-	background-color: none;
+	background-color: #022020;
+	border-radius: 15px;
 	color: rgb(255, 255, 255);
 	width: 70%;
 	margin: 0 auto;

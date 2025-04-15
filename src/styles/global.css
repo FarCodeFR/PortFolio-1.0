@@ -81,6 +81,22 @@ main {
 	& .container-section-formulaire > h2 {
 		color: white;
 	}
+	& .container-formulaire {
+		& input {
+			background: rgb(2, 33, 33);
+		}
+		& textarea {
+			background: rgb(2, 33, 33);
+		}
+		& button {
+			background-color: white;
+			border: solid 2px rgb(255, 255, 255);
+			color: black;
+		}
+		& button:hover {
+			background-color: #00bd74;
+		}
+	}
 	.scroll-box {
 		background-color: #00bd74;
 	}
@@ -106,6 +122,9 @@ main {
 	& .title {
 		color: black;
 		font-style: italic;
+	}
+	& .container-profil {
+		background-color: #ffffff;
 	}
 	& .scroll-list section > a > div {
 		background-color: rgb(0, 0, 0);
