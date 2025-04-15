@@ -1,11 +1,8 @@
 /* * Container profil */
 
 .container-profil {
-	background-color: rgba(255, 255, 255, 0.571);
-	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px
-		2px 6px 2px;
-	border-radius: 10px;
-	color: black;
+	background-color: none;
+	color: rgb(255, 255, 255);
 	width: 70%;
 	margin: 0 auto;
 	padding: 2rem;
@@ -79,6 +76,7 @@
 
 .container-link > a:hover {
 	opacity: 85%;
+	border: solid 3px #13c178;
 }
 
 .container-link > a > img {

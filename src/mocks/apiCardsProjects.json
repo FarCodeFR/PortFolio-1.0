@@ -21,8 +21,9 @@
 		"id": 3,
 		"name": "Project 3",
 		"title": "Casse-croute",
-		"image": "images/project3.jpg",
-		"alt": "une représentation prochainement",
+		"image": "images/project3.png",
+		"alt": "une représentation d'un site de recettes de cuisines",
+		"info": "https://github.com/FarCodeFR/Casse-Croute/tree/dev",
 		"link": "https://www.figma.com/design/HrXezqeeadm6YPxjO4fBbt/CASSE-CROUTE?m=auto&t=MMnpi9ruoWU4q5RZ-6"
 	}
 ]
