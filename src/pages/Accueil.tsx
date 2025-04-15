@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../styles/global.css";
 import "../styles/global.css";
 import Profile from "../assets/components/Profile";
@@ -6,8 +6,15 @@ import CardProjects from "../assets/components/CardProjects";
 import Formulaire from "../assets/components/Formulaire";
 
 function Accueil() {
-	const [theme, setTheme] = useState("Light");
-	console.log(theme);
+	const [theme, setTheme] = useState(() => {
+		const isTheme = localStorage.getItem("theme");
+		return isTheme ? isTheme : "Light";
+	});
+
+	useEffect(() => {
+		localStorage.setItem("theme", theme);
+	}, [theme]);
+
 	return (
 		<main id={theme}>
 			<h1 className="title">
