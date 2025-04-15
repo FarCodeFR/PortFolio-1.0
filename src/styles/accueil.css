@@ -157,29 +157,36 @@ input:checked + .slider:before {
 
 .container-section-profil {
 	display: flex;
+	border-radius: 2px;
 	margin: 0 auto;
 	width: 80%;
-	border-top: solid 4px #000000;
+	border-radius: 4px;
+	border-top: solid 6px #00b169;
 }
 
 .container-section-profil > section:first-of-type {
 	margin-top: 30px;
+	border-radius: 4px;
 	width: 70%;
 	font-size: 0;
-	border-top: solid 4px black;
+	border-top: solid 6px #00b169;
 }
 
 .container-section-profil > h2 {
 	font-size: 32px;
 	margin: 10px 0 0 30px;
+	color: #1f1f1f;
 	font-family: var(--font-family);
 	font-style: italic;
 }
 
 .container-section-profil > .second-ligne-profil {
 	position: absolute;
-	border-top: solid 4px black;
+	border-top: solid 6px #00b169;
+	border-radius: 4px;
+
 	width: 60%;
+	border-radius: 4px;
 	margin-top: 60px;
 	font-size: 0;
 	margin-left: 10%;
@@ -191,7 +198,8 @@ input:checked + .slider:before {
 	display: flex;
 	margin: 0 auto;
 	width: 80%;
-	border-top: solid 4px #000000;
+	border-top: solid 6px #00b169;
+	border-radius: 4px;
 }
 
 .container-section-projects > section:first-of-type {
@@ -199,7 +207,8 @@ input:checked + .slider:before {
 	width: 80%;
 	margin-left: 2%;
 	font-size: 0;
-	border-top: solid 4px black;
+	border-top: solid 6px #00b169;
+	border-radius: 4px;
 }
 
 .container-section-projects > h2 {
@@ -212,7 +221,9 @@ input:checked + .slider:before {
 
 .container-section-projects > .second-ligne-projects {
 	position: absolute;
-	border-top: solid 4px black;
+	border-top: solid 6px #00b169;
+	border-radius: 4px;
+
 	width: 60%;
 	margin-top: 60px;
 	font-size: 0;
@@ -225,14 +236,17 @@ input:checked + .slider:before {
 	display: flex;
 	margin: 0 auto;
 	width: 80%;
-	border-top: solid 4px #000000;
+	border-radius: 4px;
+
+	border-top: solid 6px #00b169;
 }
 
 .container-section-formulaire > section:first-of-type {
 	margin-top: 30px;
 	width: 70%;
 	font-size: 0;
-	border-top: solid 4px rgb(0, 0, 0);
+	border-top: solid 6px #00b169;
+	border-radius: 4px;
 }
 
 .container-section-formulaire > h2 {
@@ -244,11 +258,17 @@ input:checked + .slider:before {
 
 .container-section-formulaire > .second-ligne-formulaire {
 	position: absolute;
-	border-top: solid 4px rgb(1, 1, 1);
+	border-top: solid 6px #00b169;
+	border-radius: 4px;
+
 	width: 60%;
 	margin-top: 60px;
 	font-size: 0;
 	margin-left: 10%;
+}
+
+.scroll-box > h2 {
+	font-size: 0;
 }
 
 /* ? Responsive iphone 14pro max */
