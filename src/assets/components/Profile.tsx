@@ -8,7 +8,7 @@ function Profile() {
 
     if (userConfirmed) {
       const link = document.createElement("a");
-      link.href = "/public/images/CV-3.pdf";
+      link.href = "public/images/CV-3.pdf";
       link.download = "CV.pdf";
       link.click();
     } else {
@@ -46,7 +46,7 @@ function Profile() {
           <section className="container-link">
             <a
               onClick={handleDownload}
-              href="public/images/CV-3.pdf"
+              href="/images/CV-3.pdf"
               download="CV"
               id="link1"
             >
