@@ -8,7 +8,7 @@ function Profile() {
 
     if (userConfirmed) {
       const link = document.createElement("a");
-      link.href = "public/images/CV-3.pdf";
+      link.href = "/images/CV-3.pdf";
       link.download = "CV.pdf";
       link.click();
     } else {
