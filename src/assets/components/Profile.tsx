@@ -33,15 +33,21 @@ function Profile() {
             Alternance
           </p>
           <p>
-            Je suis passionné par les nouvelles technologies et la création de
-            projets innovants, ce qui m'aide à consolider mes acquis tout en
-            continuant à apprendre chaque jour. <br />
-            <br /> J'aime découvrir de nouvelles technologies et enrichir mes
-            connaissances grâce à des expériences concrètes, en réalisant des
-            projets variés. Cette approche me motive à repousser mes limites et
-            à développer de nouvelles solutions plus performantes. Toujours
-            curieux et motivé, je cherche constamment à évoluer dans ce domaine
-            en perpétuelle innovation.
+            Passionné d'informatique depuis mon plus jeune âge, j’ai récemment
+            suivi une formation intensive de 5 mois (équivalent Bac +2)
+            Développeur web Full Stack. <br /> <br /> Cette expérience a été une
+            véritable révélation : j’ai découvert à quel point j’aimais créer,
+            explorer de nouvelles façons de coder et apprendre continuellement
+            de nouvelles technologies.
+            <br />
+            <br />
+            Après avoir validé ma certification j'ai souhaité continuer à
+            progresser et acquérir de nouvelles compétences. <br /> <br /> j’ai
+            donc choisi d’intégrer un Mastère Lead Développeur Front-End à
+            partir de septembre 2025 pour une durée de deux ans en alternance.
+            <br /> <br /> Je cherche une entreprise prête à m’accueillir en
+            alternance, où je pourrai monter en compétences, contribuer
+            concrètement aux projets et relever des défis au quotidien.
           </p>
           <section className="container-link">
             <a
