@@ -39,6 +39,7 @@
 		"name": "Projet 5",
 		"title": "En cours 🏗️",
 		"image": "images/construction.avif",
-		"alt": "Site vitrine pour une association"
+		"alt": "Site vitrine pour une association",
+		"info": "https://tools-box-gray.vercel.app/"
 	}
 ]
