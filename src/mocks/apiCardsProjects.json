@@ -32,14 +32,14 @@
 		"title": "Bac-à-Sable",
 		"image": "images/bac-a-sable.png",
 		"alt": "Site bac à sable pour s'entrainer",
-		"info": "https://github.com/FarCodeFR/Tools-Box"
+		"info": "https://github.com/FarCodeFR/Tools-Box",
+		"link": "https://tools-box-gray.vercel.app/"
 	},
 	{
 		"id": 5,
 		"name": "Projet 5",
 		"title": "En cours 🏗️",
 		"image": "images/construction.avif",
-		"alt": "Site vitrine pour une association",
-		"info": "https://tools-box-gray.vercel.app/"
+		"alt": "Site vitrine pour une association"
 	}
 ]
