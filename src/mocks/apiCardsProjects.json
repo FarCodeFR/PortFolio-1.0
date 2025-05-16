@@ -1,7 +1,7 @@
 [
 	{
 		"id": 1,
-		"name": "Project 1",
+		"name": "Projet 1",
 		"title": "Caféothèque",
 		"image": "images/project1.jpg",
 		"alt": "une représentation d'un site de café",
@@ -10,7 +10,7 @@
 	},
 	{
 		"id": 2,
-		"name": "Project 2",
+		"name": "Projet 2",
 		"title": "Good-Vibes",
 		"image": "images/project2.png",
 		"alt": "une représentation d'un site de bonne nouvelle",
@@ -19,11 +19,26 @@
 	},
 	{
 		"id": 3,
-		"name": "Project 3",
+		"name": "Projet 3",
 		"title": "Casse-croute",
 		"image": "images/project3.png",
 		"alt": "une représentation d'un site de recettes de cuisines",
 		"info": "https://github.com/FarCodeFR/Casse-Croute/tree/dev",
 		"link": "https://www.figma.com/design/HrXezqeeadm6YPxjO4fBbt/CASSE-CROUTE?m=auto&t=MMnpi9ruoWU4q5RZ-6"
+	},
+	{
+		"id": 4,
+		"name": "Projet 4",
+		"title": "Bac-à-Sable",
+		"image": "images/bac-a-sable.png",
+		"alt": "Site bac à sable pour s'entrainer",
+		"info": "https://github.com/FarCodeFR/Tools-Box"
+	},
+	{
+		"id": 5,
+		"name": "Projet 5",
+		"title": "En cours 🏗️",
+		"image": "images/construction.avif",
+		"alt": "Site vitrine pour une association"
 	}
 ]
