@@ -1,6 +1,40 @@
+import { useAnimation, motion } from "framer-motion";
 import "../../styles/profile.css";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 function Profile() {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0.2,
+    triggerOnce: false,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [inView, controls]);
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+        staggerChildren: 0.2,
+      },
+    },
+  };
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   const handleDownload = (event: React.MouseEvent) => {
     event.preventDefault();
 
@@ -49,29 +83,47 @@ function Profile() {
             alternance, où je pourrai monter en compétences, contribuer
             concrètement aux projets et relever des défis au quotidien.
           </p>
-          <section className="container-link">
-            <a
+          <motion.section
+            ref={ref}
+            variants={containerVariants}
+            initial="hidden"
+            animate={controls}
+            className="container-link"
+          >
+            <motion.a
+              variants={itemVariants}
               onClick={handleDownload}
               href="/images/CV-3.pdf"
               download="CV"
               id="link1"
             >
               <img src="images/cv.jpg" alt="images de cv " />
-            </a>
-            <a target="_blanck" id="link2" href="https://github.com/FarCodeFR">
+            </motion.a>
+            <motion.a
+              variants={itemVariants}
+              target="_blanck"
+              id="link2"
+              href="https://github.com/FarCodeFR"
+            >
               <img src="images/GitHub.png" alt="images de github" />
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              variants={itemVariants}
               target="_blanck"
               id="link3"
               href="https://www.linkedin.com/in/timoth%C3%A9-renard-a686072b4/"
             >
               <img src="images/Linkedin.png" alt="images de linkedin" />
-            </a>
-            <a target="_blanck" id="link4" href="mailto:Timothe-44@hotmail.fr">
+            </motion.a>
+            <motion.a
+              variants={itemVariants}
+              target="_blanck"
+              id="link4"
+              href="mailto:Timothe-44@hotmail.fr"
+            >
               <img src="images/mail.jpg" alt="images de mail" />
-            </a>
-          </section>
+            </motion.a>
+          </motion.section>
         </section>
       </section>
     </>

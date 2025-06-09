@@ -113,7 +113,6 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: #ffffff;
 	-webkit-transition: .4s;
 	transition: .4s;
 }
@@ -124,25 +123,17 @@
 	text-align: center;
 	align-content: center;
 	font-family: var(--font-family);
-	color: white;
 	height: 35px;
 	width: 35px;
 	left: 4px;
 	bottom: 3px;
-	background-color: rgb(0, 0, 0);
 	-webkit-transition: .4s;
 	transition: .4s;
 }
 
-input:checked + .slider {
-	background-color: #000000;
-}
-
 input:checked + .slider:before {
 	transform: translateX(57px);
-	background-color: rgb(237, 237, 237);
 	content: "Light";
-	color: black;
 }
 
 .slider {
