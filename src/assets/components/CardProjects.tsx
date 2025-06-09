@@ -8,14 +8,12 @@ function CardItem({ el, direction }: { direction: number; el: any }) {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     threshold: 0.4,
-    triggerOnce: false,
+    triggerOnce: true,
   });
 
   useEffect(() => {
     if (inView) {
       controls.start("visible");
-    } else {
-      controls.start("hidden");
     }
   }, [inView, controls]);
   const variants = {
