@@ -1,20 +1,11 @@
-import { useEffect, useState } from "react";
 import "../styles/global.css";
 import "../styles/global.css";
 import Profile from "../assets/components/Profile";
 import CardProjects from "../assets/components/CardProjects";
 import Formulaire from "../assets/components/Formulaire";
+import { AccueilProps } from "../types/animation";
 
-function Accueil() {
-  const [theme, setTheme] = useState(() => {
-    const isTheme = localStorage.getItem("theme");
-    return isTheme ? isTheme : "Light";
-  });
-
-  useEffect(() => {
-    localStorage.setItem("theme", theme);
-  }, [theme]);
-
+function Accueil({ theme, setTheme }: AccueilProps) {
   return (
     <main id={theme}>
       <h1 className="title">

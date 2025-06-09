@@ -5,7 +5,7 @@ import Home from "./Home.tsx";
 
 // biome-ignore lint/style/noNonNullAssertion: <explanation>
 createRoot(document.getElementById("root")!).render(
-	<StrictMode>
-		<Home />
-	</StrictMode>,
+  <StrictMode>
+    <Home />
+  </StrictMode>
 );
