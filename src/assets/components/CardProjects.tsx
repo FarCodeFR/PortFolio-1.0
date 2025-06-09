@@ -4,7 +4,7 @@ import { useAnimation, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
-function CardItem({ el }: { el: any }) {
+function CardItem({ el, direction }: { direction: number; el: any }) {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     threshold: 0.4,
@@ -18,17 +18,17 @@ function CardItem({ el }: { el: any }) {
       controls.start("hidden");
     }
   }, [inView, controls]);
-
   const variants = {
-    hidden: (direction: number) => ({
+    hidden: {
       opacity: 0,
-      x: direction > 0 ? 1000 : direction < 0 ? -1000 : 0,
-      rotate: direction > 0 ? 90 : direction < 0 ? -90 : 0,
+      x: direction * 100,
+      rotate: 10,
       scale: 0.7,
-    }),
+    },
     visible: {
       opacity: 1,
       x: 0,
+      rotate: 0,
       scale: 1,
       transition: {
         duration: 0.8,
@@ -39,10 +39,10 @@ function CardItem({ el }: { el: any }) {
       },
     },
   };
+
   return (
     <motion.section
       id={el.title}
-      key={el.id}
       ref={ref}
       variants={variants}
       initial="hidden"
@@ -106,7 +106,13 @@ function CardProjects() {
   return (
     <section className="container-placement-cards">
       {data.map((el) => {
-        return <CardItem key={el.id} el={el} />;
+        return (
+          <CardItem
+            key={el.id}
+            el={el}
+            direction={scrollDirection === "down" ? 1 : -1}
+          />
+        );
       })}
     </section>
   );

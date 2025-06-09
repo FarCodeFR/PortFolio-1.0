@@ -15,6 +15,7 @@
 	background-color: rgb(0, 0, 0);
 	box-shadow: 0px 0px 0px 5px rgb(158, 158, 158);
 	border-radius: 10px;
+  will-change: transform, opacity;
 	font-family: var(--font-family);
 	padding: 10px 10px 15px 10px;
   transition: transform 0.3s ease, opacity 0.3s ease;
