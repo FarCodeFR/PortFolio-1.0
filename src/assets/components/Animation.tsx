@@ -92,6 +92,8 @@ function Animation({ theme }: BackgroundAnimationProps) {
       const delta = clock.getDelta();
       const time = clock.getElapsedTime();
 
+      const boundary = 50;
+
       for (let i = 0; i < particleCount; i++) {
         const ix = i * 3;
 
@@ -100,6 +102,14 @@ function Animation({ theme }: BackgroundAnimationProps) {
         positions[ix + 1] += velocities[ix + 1];
         positions[ix + 2] += velocities[ix + 2];
 
+        // Réapparition de l’autre côté si on dépasse le cube
+        for (let j = 0; j < 3; j++) {
+          if (positions[ix + j] > boundary) {
+            positions[ix + j] = -boundary;
+          } else if (positions[ix + j] < -boundary) {
+            positions[ix + j] = boundary;
+          }
+        }
         // Couleurs oscillantes
         if (theme === "Light") {
           const colorFactor = (Math.sin(time * 2 + i) + 1) / 2;
