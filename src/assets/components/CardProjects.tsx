@@ -4,7 +4,7 @@ import { useAnimation, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
-function CardItem({ el, direction }: { direction: number; el: any }) {
+function CardItem({ el }: { direction: number; el: any }) {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     threshold: 0.4,
@@ -19,7 +19,7 @@ function CardItem({ el, direction }: { direction: number; el: any }) {
   const variants = {
     hidden: {
       opacity: 0,
-      x: direction * 100,
+      x: 100,
       rotate: 10,
       scale: 0.7,
     },
