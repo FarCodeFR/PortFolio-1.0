@@ -1,13 +1,18 @@
 /* * Titre */
 
-.title {
+.title  {
 	font-size: 100px;
-	padding-left: 1.5em;
-	padding-top: 1.5em;
+	padding-left: 1em;
+	padding-top: 0.5em;
 	color: white;
-	margin: 0 auto;
+	margin: 0% auto;
 	font-family: var(--font-family);
+	& p {
+		text-align: start;
+		line-height: 0;
+	}
 }
+
 
 /* * Scrol List */
 
