@@ -8,7 +8,7 @@ function CardItem({ el }: { direction: number; el: any }) {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     threshold: 0.4,
-    triggerOnce: true,
+    triggerOnce: false,
   });
 
   useEffect(() => {
