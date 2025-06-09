@@ -7,9 +7,30 @@ import { AccueilProps } from "../types/animation";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import gsap from "gsap";
+import SplitType from "split-type";
 
 function Accueil({ theme, setTheme }: AccueilProps) {
   const barControls = useAnimation();
+
+  useEffect(() => {
+    const split = new SplitType(".title p", { types: "chars" });
+    const chars = document.querySelectorAll(".char");
+
+    gsap.set(chars, { opacity: 0, y: 20 });
+
+    gsap.to(chars, {
+      opacity: 1,
+      y: 0,
+      stagger: 0.05,
+      duration: 0.8,
+      ease: "power2.out",
+    });
+
+    return () => {
+      split.revert();
+    };
+  }, []);
 
   const [barRef, barInView] = useInView({
     threshold: 0.5,
@@ -37,11 +58,13 @@ function Accueil({ theme, setTheme }: AccueilProps) {
   };
   return (
     <main id={theme}>
-      <h1 className="title">
-        Welcome
-        <br />
-        to my portfolio
-      </h1>
+      <div className="container-title">
+        <div className="title">
+          <p>Welcome</p>
+          <p>to my portfolio</p>
+          <p>Timothé</p>
+        </div>
+      </div>
       <section className="container-toggle">
         <label htmlFor="theme-toggle" className="toggle-switch">
           <input
@@ -74,9 +97,7 @@ function Accueil({ theme, setTheme }: AccueilProps) {
         initial="hidden"
         animate={barControls}
         className="scroll-box"
-      >
-        <h2>My Portfolio !</h2>
-      </motion.header>
+      ></motion.header>
       <section id="profil" className="container-section-profil">
         <section>.</section>
         <h2>Profil</h2>

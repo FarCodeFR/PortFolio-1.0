@@ -47,6 +47,9 @@ main {
 }
 
 #Dark {
+	& .title {
+		font-style: italic;
+	}
 	& .container-section-profil {
 		border-top: solid 4px white;
 	}
