@@ -116,7 +116,7 @@ main {
 					outline: solid 1.5px black;
 
 	}
-	@media screen and (max-width: 400px) {
+	@media screen and (max-width: 300px) {
 		.slider {
 			background-color: black;
 			border: solid 2px black;

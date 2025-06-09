@@ -97,7 +97,9 @@ function Accueil({ theme, setTheme }: AccueilProps) {
         initial="hidden"
         animate={barControls}
         className="scroll-box"
-      ></motion.header>
+      >
+        <h2>My Portfolio !</h2>
+      </motion.header>
       <section id="profil" className="container-section-profil">
         <section>.</section>
         <h2>Profil</h2>
