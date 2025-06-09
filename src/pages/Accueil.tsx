@@ -4,8 +4,37 @@ import Profile from "../assets/components/Profile";
 import CardProjects from "../assets/components/CardProjects";
 import Formulaire from "../assets/components/Formulaire";
 import { AccueilProps } from "../types/animation";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 function Accueil({ theme, setTheme }: AccueilProps) {
+  const barControls = useAnimation();
+
+  const [barRef, barInView] = useInView({
+    threshold: 0.5,
+    triggerOnce: false,
+  });
+
+  useEffect(() => {
+    if (barInView) {
+      barControls.start("visible");
+    } else {
+      barControls.start("hidden");
+    }
+  }, [barInView, barControls]);
+
+  const barVariants = {
+    hidden: { opacity: 0, scaleX: 0, originX: 0 },
+    visible: {
+      opacity: 1,
+      scaleX: 1,
+      transition: {
+        duration: 0.7,
+        ease: "easeOut",
+      },
+    },
+  };
   return (
     <main id={theme}>
       <h1 className="title">
@@ -39,9 +68,15 @@ function Accueil({ theme, setTheme }: AccueilProps) {
           </a>
         </section>
       </section>
-      <header className="scroll-box">
+      <motion.header
+        ref={barRef}
+        variants={barVariants}
+        initial="hidden"
+        animate={barControls}
+        className="scroll-box"
+      >
         <h2>My Portfolio !</h2>
-      </header>
+      </motion.header>
       <section id="profil" className="container-section-profil">
         <section>.</section>
         <h2>Profil</h2>
