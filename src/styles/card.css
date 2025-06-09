@@ -17,7 +17,9 @@
 	border-radius: 10px;
 	font-family: var(--font-family);
 	padding: 10px 10px 15px 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
 
 .container-card-projects > section:first-of-type {
 	width: 100%;

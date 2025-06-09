@@ -94,7 +94,10 @@ main {
 		}
 	}
 	.scroll-box {
-		background-color: #00bd74;
+		background-color: #ffffff;
+		& h2 {
+			color: rgb(0, 0, 0);
+		}
 	}
 	#scroll1:hover {
 		background: none;
