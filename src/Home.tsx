@@ -1,9 +1,9 @@
 import "./styles/global.css";
-import "./styles/accueil.css";
-import Accueil from "./pages/Accueil";
+import "./styles/welcome.css";
 import Animation from "./assets/components/Animation";
 import { useEffect, useState } from "react";
 import { ThemeType } from "./types/animation";
+import Welcome from "./pages/Welcome";
 
 function Home() {
   const [theme, setTheme] = useState<ThemeType>(() => {
@@ -18,7 +18,7 @@ function Home() {
   return (
     <main>
       <Animation theme={theme} />
-      <Accueil theme={theme} setTheme={setTheme} />
+      <Welcome theme={theme} setTheme={setTheme} />
     </main>
   );
 }

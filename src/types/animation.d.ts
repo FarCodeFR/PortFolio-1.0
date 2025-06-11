@@ -3,7 +3,7 @@ export interface BackgroundAnimationProps {
 }
 export type ThemeType = "Light" | "Dark";
 
-export interface AccueilProps {
+export interface WelcomeProps {
   theme: ThemeType;
   setTheme: React.Dispatch<React.SetStateAction<ThemeType>>;
 }

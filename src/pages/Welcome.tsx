@@ -1,24 +1,23 @@
 import "../styles/global.css";
-import "../styles/global.css";
+import "../styles/welcome.css";
 import Profile from "../assets/components/Profile";
 import CardProjects from "../assets/components/CardProjects";
 import Formulaire from "../assets/components/Formulaire";
-import { AccueilProps } from "../types/animation";
+import { WelcomeProps } from "../types/animation";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import gsap from "gsap";
 import SplitType from "split-type";
 
-function Accueil({ theme, setTheme }: AccueilProps) {
+function Welcome({ theme, setTheme }: WelcomeProps) {
   const barControls = useAnimation();
 
   useEffect(() => {
+    // Title
     const split = new SplitType(".title", { types: "chars" });
     const chars = document.querySelectorAll(".char");
-
     gsap.set(chars, { opacity: 0, y: 20 });
-
     gsap.to(chars, {
       opacity: 1,
       y: 0,
@@ -26,7 +25,6 @@ function Accueil({ theme, setTheme }: AccueilProps) {
       duration: 0.8,
       ease: "power2.out",
     });
-
     return () => {
       split.revert();
     };
@@ -56,6 +54,14 @@ function Accueil({ theme, setTheme }: AccueilProps) {
       },
     },
   };
+
+  useEffect(() => {
+    const ticker = document.querySelector(".ticker-content");
+    if (ticker) {
+      ticker.innerHTML += ticker.innerHTML;
+    }
+  }, []);
+
   return (
     <main id={theme}>
       <h1 className="title">
@@ -95,7 +101,21 @@ function Accueil({ theme, setTheme }: AccueilProps) {
         animate={barControls}
         className="scroll-box"
       >
-        <h2>Recherche Alternance</h2>
+        <div className="stock-ticker">
+          <div className="ticker-content">
+            <ul>
+              <li>
+                <span>Je suis disponile 🟢</span>
+              </li>
+              <li>
+                <span>En recherche d'alternance 👨🏻‍💻</span>
+              </li>
+              <li>
+                <span>Mastère lead développeur 👨🏻‍🎓</span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </motion.header>
       <section id="profil" className="container-section-profil">
         <section>.</section>
@@ -119,4 +139,4 @@ function Accueil({ theme, setTheme }: AccueilProps) {
   );
 }
 
-export default Accueil;
+export default Welcome;

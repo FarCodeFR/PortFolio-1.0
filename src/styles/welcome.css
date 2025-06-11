@@ -93,8 +93,44 @@
 
 /* * Header */
 
-.scroll-box > h2 {
-	font-size: 0;
+.stock-ticker {
+  overflow: hidden;
+  position: relative;
+  height: 40px;
+  display: flex;
+  align-items: center;
+	width: 100%;
+}
+
+.ticker-content {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll-left 20s linear infinite;
+}
+
+.ticker-content ul {
+  display: flex;
+  list-style: none;
+  gap: 0rem;
+  margin: 0;
+  padding: 0;
+}
+
+.ticker-content ul li {
+  font-weight: 600;
+	margin-left: 5em;
+	font-size: 20px;
+  font-family: var(--font-family);
+	color: black;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* * Toggle Switch */
@@ -303,7 +339,6 @@ input:checked + .slider:before {
 		width: 100%;
 		height: 60px;
 		margin-top: 80vh;
-		border-radius: 0 0 40px 40px;
 		background-color: #00b169;
 	}
 	.scroll-box > h2 {
