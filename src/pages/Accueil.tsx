@@ -14,7 +14,7 @@ function Accueil({ theme, setTheme }: AccueilProps) {
   const barControls = useAnimation();
 
   useEffect(() => {
-    const split = new SplitType(".title p", { types: "chars" });
+    const split = new SplitType(".title", { types: "chars" });
     const chars = document.querySelectorAll(".char");
 
     gsap.set(chars, { opacity: 0, y: 20 });
@@ -58,13 +58,10 @@ function Accueil({ theme, setTheme }: AccueilProps) {
   };
   return (
     <main id={theme}>
-      <div className="container-title">
-        <div className="title">
-          <p>Welcome</p>
-          <p>to my portfolio</p>
-          <p>Timothé</p>
-        </div>
-      </div>
+      <h1 className="title">
+        Welcome
+        <br /> to my portfolio
+      </h1>
       <section className="container-toggle">
         <label htmlFor="theme-toggle" className="toggle-switch">
           <input
@@ -98,7 +95,7 @@ function Accueil({ theme, setTheme }: AccueilProps) {
         animate={barControls}
         className="scroll-box"
       >
-        <h2>My Portfolio !</h2>
+        <h2>Recherche Alternance</h2>
       </motion.header>
       <section id="profil" className="container-section-profil">
         <section>.</section>
