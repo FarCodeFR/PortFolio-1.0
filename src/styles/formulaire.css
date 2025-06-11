@@ -80,7 +80,7 @@
 .container-form-div {
 	position: relative;
 	height: 2.5em;
-	margin-bottom: 2rem;
+	margin-bottom: 3rem;
 }
 
 .container-formulaire > div > h3 {
@@ -90,7 +90,7 @@
 @media screen and (max-width: 440px) {
 	.container-formulaire > form {
 		width: 80%;
-		margin: 0% auto;
+		margin: 5% auto;
 		& button {
 			position: relative;
 			top: 50px;
