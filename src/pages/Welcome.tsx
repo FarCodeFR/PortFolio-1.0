@@ -32,15 +32,20 @@ function Welcome({ theme, setTheme }: WelcomeProps) {
   }, []);
 
   const [barRef, barInView] = useInView({
-    threshold: 0.5,
+    threshold: 0.1,
     triggerOnce: false,
   });
 
   useEffect(() => {
-    if (barInView) {
+    const isMobile = window.innerWidth <= 430;
+    if (isMobile) {
       barControls.start("visible");
     } else {
-      barControls.start("hidden");
+      if (barInView) {
+        barControls.start("visible");
+      } else {
+        barControls.start("hidden");
+      }
     }
   }, [barInView, barControls]);
 
