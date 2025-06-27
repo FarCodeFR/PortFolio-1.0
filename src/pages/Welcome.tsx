@@ -23,7 +23,7 @@ function Welcome({ theme, setTheme }: WelcomeProps) {
       opacity: 1,
       y: 0,
       stagger: 0.05,
-      duration: 0.8,
+      duration: 1,
       ease: "power2.out",
     });
     return () => {
