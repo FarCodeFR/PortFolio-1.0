@@ -29,9 +29,10 @@ function Animation({ theme }: BackgroundAnimationProps) {
       renderer.setClearColor(new THREE.Color("#000011"));
     }
 
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(window.innerWidth, window.innerHeight, false);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
 
-    const particleCount = 40000;
+    const particleCount = 10000;
     const positions = new Float32Array(particleCount * 3);
     const colors = new Float32Array(particleCount * 3);
     const velocities = new Float32Array(particleCount * 3);
@@ -134,8 +135,8 @@ function Animation({ theme }: BackgroundAnimationProps) {
       geometry.attributes.position.needsUpdate = true;
       geometry.attributes.color.needsUpdate = true;
 
-      particles.rotation.y += delta * 0.02;
-      particles.rotation.x += delta * 0.01;
+      particles.rotation.y += delta * 0.01;
+      particles.rotation.x += delta * 0.005;
 
       renderer.render(scene, camera);
     }

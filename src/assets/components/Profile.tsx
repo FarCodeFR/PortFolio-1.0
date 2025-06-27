@@ -57,6 +57,7 @@ function Profile() {
           <img
             src="images/photo-profile.jpg"
             alt="Une personne sur une place"
+            loading="lazy"
           />
         </picture>
         <section className="container-text-profil">

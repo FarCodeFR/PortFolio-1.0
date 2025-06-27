@@ -1,17 +1,18 @@
 import "../styles/global.css";
 import "../styles/welcome.css";
-import Profile from "../assets/components/Profile";
-import CardProjects from "../assets/components/CardProjects";
-import Formulaire from "../assets/components/Formulaire";
 import { WelcomeProps } from "../types/animation";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import gsap from "gsap";
 import SplitType from "split-type";
 
 function Welcome({ theme, setTheme }: WelcomeProps) {
   const barControls = useAnimation();
+
+  const Profile = lazy(() => import("../assets/components/Profile"));
+  const CardProjects = lazy(() => import("../assets/components/CardProjects"));
+  const Formulaire = lazy(() => import("../assets/components/Formulaire"));
 
   useEffect(() => {
     // Title
@@ -122,19 +123,22 @@ function Welcome({ theme, setTheme }: WelcomeProps) {
         <h2>Profil</h2>
         <section className="second-ligne-profil">.</section>
       </section>
-      <Profile />
-      <section id="projects" className="container-section-projects">
-        <h2>Projets</h2>
-        <section>.</section>
-        <section className="second-ligne-projects">.</section>
-      </section>
-      <CardProjects />
-      <section id="formulaire" className="container-section-formulaire">
-        <section>.</section>
-        <h2>Formulaire</h2>
-        <section className="second-ligne-formulaire">.</section>
-      </section>
-      <Formulaire />
+      <Suspense fallback={<p>Chargement...</p>}>
+        <Profile />
+        <section id="projects" className="container-section-projects">
+          <h2>Projets</h2>
+          <section>.</section>
+          <section className="second-ligne-projects">.</section>
+        </section>
+        <CardProjects />
+
+        <section id="formulaire" className="container-section-formulaire">
+          <section>.</section>
+          <h2>Formulaire</h2>
+          <section className="second-ligne-formulaire">.</section>
+        </section>
+        <Formulaire />
+      </Suspense>
     </main>
   );
 }
