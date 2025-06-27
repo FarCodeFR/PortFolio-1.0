@@ -118,8 +118,8 @@
 .ticker-content {
   display: flex;
   white-space: nowrap;
-	min-width: 200%;
-  animation: scroll-left 20s linear infinite;
+	width: max-content;
+  animation: scroll-left 10s linear infinite;
 }
 
 .ticker-content ul {
@@ -342,7 +342,7 @@ input:checked + .slider:before {
 
 /* * Header mobile */
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 450px) {
 	.scroll-box {
 		display: block;
 		align-content: center;
@@ -365,6 +365,9 @@ input:checked + .slider:before {
 		top: 1%;
 	}
 	.stock-ticker {
-		width: 75%;
+		width: 100%;
 	}
+	.ticker-content ul li {
+	margin-left: 3em;
+}
 }

@@ -23,7 +23,7 @@ function Welcome({ theme, setTheme }: WelcomeProps) {
       opacity: 1,
       y: 0,
       stagger: 0.05,
-      duration: 0.8,
+      duration: 1,
       ease: "power2.out",
     });
     return () => {
@@ -64,7 +64,6 @@ function Welcome({ theme, setTheme }: WelcomeProps) {
   useEffect(() => {
     const content = document.querySelector(".ticker-content");
     if (content) {
-      content.innerHTML += content.innerHTML;
       gsap.to(content, {
         xPercent: -50,
         duration: 30,
@@ -116,15 +115,14 @@ function Welcome({ theme, setTheme }: WelcomeProps) {
         <div className="stock-ticker">
           <div className="ticker-content">
             <ul>
-              <li>
-                <span>Je suis disponile 🟢</span>
-              </li>
-              <li>
-                <span>En recherche d'alternance 👨🏻‍💻</span>
-              </li>
-              <li>
-                <span>Mastère lead développeur 👨🏻‍🎓</span>
-              </li>
+              <li>Je suis disponible 🟢</li>
+              <li>En recherche d'alternance 👨🏻‍💻</li>
+              <li>Mastère lead développeur 👨🏻‍🎓</li>
+            </ul>
+            <ul>
+              <li>Je suis disponible 🟢</li>
+              <li>En recherche d'alternance 👨🏻‍💻</li>
+              <li>Mastère lead développeur 👨🏻‍🎓</li>
             </ul>
           </div>
         </div>
