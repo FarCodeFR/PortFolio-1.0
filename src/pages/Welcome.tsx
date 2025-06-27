@@ -57,9 +57,15 @@ function Welcome({ theme, setTheme }: WelcomeProps) {
   };
 
   useEffect(() => {
-    const ticker = document.querySelector(".ticker-content");
-    if (ticker) {
-      ticker.innerHTML += ticker.innerHTML;
+    const content = document.querySelector(".ticker-content");
+    if (content) {
+      content.innerHTML += content.innerHTML;
+      gsap.to(content, {
+        xPercent: -50,
+        duration: 30,
+        repeat: -1,
+        ease: "linear",
+      });
     }
   }, []);
 
