@@ -1,7 +1,6 @@
 import "./styles/global.css";
 import "./styles/welcome.css";
-import Animation from "./assets/components/Animation";
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { ThemeType } from "./types/animation";
 import Welcome from "./pages/Welcome";
 
@@ -11,13 +10,17 @@ function Home() {
     return saved === "Light" || saved === "Dark" ? saved : "Light";
   });
 
+  const Animation = lazy(() => import("./assets/components/Animation"));
+
   useEffect(() => {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
   return (
     <main>
-      <Animation theme={theme} />
+      <Suspense fallback={<p>Chargement...</p>}>
+        <Animation theme={theme} />
+      </Suspense>
       <Welcome theme={theme} setTheme={setTheme} />
     </main>
   );
