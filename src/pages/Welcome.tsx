@@ -33,6 +33,7 @@ function Welcome({ theme, setTheme }: WelcomeProps) {
 
   const handleClickAnimation = (e: React.MouseEvent) => {
     e.preventDefault();
+    e.stopPropagation();
     document
       .getElementById("s-animation")
       ?.scrollIntoView({ behavior: "smooth" });
@@ -89,7 +90,6 @@ function Welcome({ theme, setTheme }: WelcomeProps) {
       </h1>
       <button
         className="scroll-indicator"
-        type="button"
         onClick={(e) => handleClickAnimation(e)}
       >
         <span>V</span>
