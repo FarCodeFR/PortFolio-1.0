@@ -32,11 +32,7 @@ function Welcome({ theme, setTheme }: WelcomeProps) {
   }, []);
 
   const handleClickAnimation = () => {
-    if (!isUp) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    } else {
-      document.getElementById("profil")?.scrollIntoView({ behavior: "smooth" });
-    }
+    document.getElementById("profil")?.scrollIntoView({ behavior: "smooth" });
     setIsUp(!isUp);
   };
 
