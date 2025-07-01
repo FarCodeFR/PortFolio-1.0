@@ -3,17 +3,20 @@ import "../styles/welcome.css";
 import { WelcomeProps } from "../types/animation";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { lazy, Suspense, useEffect, useState } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import gsap from "gsap";
 import SplitType from "split-type";
 
+const Profile = lazy(() => import("../assets/components/Profile"));
+const CardProjects = lazy(() => import("../assets/components/CardProjects"));
+const Formulaire = lazy(() => import("../assets/components/Formulaire"));
 function Welcome({ theme, setTheme }: WelcomeProps) {
   const barControls = useAnimation();
-  const [isUp, setIsUp] = useState(false);
-  const Profile = lazy(() => import("../assets/components/Profile"));
-  const CardProjects = lazy(() => import("../assets/components/CardProjects"));
-  const Formulaire = lazy(() => import("../assets/components/Formulaire"));
-
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 50);
+  }, []);
   useEffect(() => {
     // Title
     const split = new SplitType(".title", { types: "chars" });
@@ -31,13 +34,22 @@ function Welcome({ theme, setTheme }: WelcomeProps) {
     };
   }, []);
 
-  const handleClickAnimation = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    document
-      .getElementById("s-animation")
-      ?.scrollIntoView({ behavior: "smooth" });
-    setIsUp(!isUp);
+  useEffect(() => {
+    if (window.location.hash) {
+      history.replaceState(
+        null,
+        "",
+        window.location.pathname + window.location.search
+      );
+      window.scrollTo(0, 0);
+    }
+  }, []);
+  const handleClickAnimation = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      const y = el.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
   };
 
   const [barRef, barInView] = useInView({
@@ -90,9 +102,9 @@ function Welcome({ theme, setTheme }: WelcomeProps) {
       </h1>
       <button
         className="scroll-indicator"
-        onClick={(e) => handleClickAnimation(e)}
+        onClick={() => handleClickAnimation("profil")}
       >
-        <span>V</span>
+        V
       </button>
       <section className="container-toggle">
         <label htmlFor="theme-toggle" className="toggle-switch">
@@ -150,10 +162,7 @@ function Welcome({ theme, setTheme }: WelcomeProps) {
           </div>
         </div>
       </motion.header>
-      <section
-        id="profil"
-        className={`container-section-profil ${isUp ? "up" : ""}`}
-      >
+      <section id="profil" className={`container-section-profil`}>
         <section id="s-animation">.</section>
         <h2>Profil</h2>
         <section className="second-ligne-profil">.</section>
