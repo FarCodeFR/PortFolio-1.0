@@ -3,13 +3,13 @@ import "../styles/welcome.css";
 import { WelcomeProps } from "../types/animation";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { lazy, Suspense, useEffect } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import gsap from "gsap";
 import SplitType from "split-type";
 
 function Welcome({ theme, setTheme }: WelcomeProps) {
   const barControls = useAnimation();
-
+  const [isUp, setIsUp] = useState(false);
   const Profile = lazy(() => import("../assets/components/Profile"));
   const CardProjects = lazy(() => import("../assets/components/CardProjects"));
   const Formulaire = lazy(() => import("../assets/components/Formulaire"));
@@ -30,6 +30,15 @@ function Welcome({ theme, setTheme }: WelcomeProps) {
       split.revert();
     };
   }, []);
+
+  const handleClickAnimation = () => {
+    if (!isUp) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      document.getElementById("profil")?.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsUp(!isUp);
+  };
 
   const [barRef, barInView] = useInView({
     threshold: 0.1,
@@ -79,6 +88,13 @@ function Welcome({ theme, setTheme }: WelcomeProps) {
         Welcome
         <br /> to my portfolio
       </h1>
+      <button
+        className="scroll-indicator"
+        type="button"
+        onClick={handleClickAnimation}
+      >
+        <span>V</span>
+      </button>
       <section className="container-toggle">
         <label htmlFor="theme-toggle" className="toggle-switch">
           <input
@@ -94,14 +110,22 @@ function Welcome({ theme, setTheme }: WelcomeProps) {
       </section>
       <section className="scroll-list">
         <section>
-          <a aria-label="Aller à la section Profil" href="#profil">
-            <div id="scroll1">-</div>
+          <a aria-label="Aller à la section Profil" id="scroll1" href="#profil">
+            <div>-</div>
           </a>
-          <a aria-label="Aller à la section Projets" href="#projects">
-            <div id="scroll2">-</div>
+          <a
+            aria-label="Aller à la section Projets"
+            id="scroll2"
+            href="#projects"
+          >
+            <div>-</div>
           </a>
-          <a aria-label="Aller à la section Formulaire" href="#formulaire">
-            <div id="scroll3">-</div>
+          <a
+            aria-label="Aller à la section Formulaire"
+            id="scroll3"
+            href="#formulaire"
+          >
+            <div>-</div>
           </a>
         </section>
       </section>
@@ -127,7 +151,10 @@ function Welcome({ theme, setTheme }: WelcomeProps) {
           </div>
         </div>
       </motion.header>
-      <section id="profil" className="container-section-profil">
+      <section
+        id="profil"
+        className={`container-section-profil ${isUp ? "up" : ""}`}
+      >
         <section>.</section>
         <h2>Profil</h2>
         <section className="second-ligne-profil">.</section>
