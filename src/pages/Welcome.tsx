@@ -31,8 +31,11 @@ function Welcome({ theme, setTheme }: WelcomeProps) {
     };
   }, []);
 
-  const handleClickAnimation = () => {
-    document.getElementById("profil")?.scrollIntoView({ behavior: "smooth" });
+  const handleClickAnimation = (e: React.MouseEvent) => {
+    e.preventDefault();
+    document
+      .getElementById("s-animation")
+      ?.scrollIntoView({ behavior: "smooth" });
     setIsUp(!isUp);
   };
 
@@ -87,7 +90,7 @@ function Welcome({ theme, setTheme }: WelcomeProps) {
       <button
         className="scroll-indicator"
         type="button"
-        onClick={handleClickAnimation}
+        onClick={(e) => handleClickAnimation(e)}
       >
         <span>V</span>
       </button>
@@ -151,7 +154,7 @@ function Welcome({ theme, setTheme }: WelcomeProps) {
         id="profil"
         className={`container-section-profil ${isUp ? "up" : ""}`}
       >
-        <section>.</section>
+        <section id="s-animation">.</section>
         <h2>Profil</h2>
         <section className="second-ligne-profil">.</section>
       </section>
