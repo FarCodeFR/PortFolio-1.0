@@ -140,12 +140,11 @@ main {
 		color: black;
 		font-style: italic;
 	}
-	& .container-profil {
-		background-color: #ffffff;
-	}
 	& .scroll-list section > a > div {
 		background-color: rgb(0, 0, 0);
 	}
+	
+	
 	& .container-formulaire {
 		& label {
 			background: #ffffff;
@@ -167,28 +166,28 @@ main {
 			background-color: #00bd74;
 		}
 	}
-	#scroll1:hover {
-		background: none;
-	}
-	#scroll1:hover::after {
+
+	#scroll1:hover::after,
+	#scroll1:focus-visible::after {
+		content: "Profil";
 		color: black;
 	}
-	#scroll2:hover {
-		background: none;
-	}
-	& .container-profil {
-		background-color: none;
-		color: rgb(0, 0, 0);
-	}
-	#scroll2:hover::after {
+
+	#scroll2:hover::after,
+	#scroll2:focus-visible::after {
+		content: "Projets";
 		color: black;
 	}
-	#scroll3:hover {
-		background: none;
-	}
-	#scroll3:hover::after {
+
+	#scroll3:hover::after,
+	#scroll3:focus-visible::after {
+		content: "Formulaire";
 		color: black;
 	}
+.scroll-list section > a:focus > div {
+  background-color: #00b169;
+  transition: background-color 0.3s ease;
+}
 
 .slider:before {
 	color: rgb(255, 255, 255);

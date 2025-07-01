@@ -18,6 +18,26 @@
 	}
 }
 
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: #838383;
+	border: none;
+	background: none;
+	border-radius: 5px;
+	font-family: sans-serif;
+  animation: bounce 2s infinite;
+  cursor: pointer;
+
+}
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(10px); }
+}
+
 
 /* * Scrol List */
 
@@ -25,8 +45,7 @@
 	display: flex;
 	justify-content: end;
 	align-items: center;
-	padding: 30px;
-	line-height: 1.5;
+	padding: 20px;
 	margin-bottom: 50%;
 }
 
@@ -35,21 +54,38 @@
 	position: fixed;
 }
 
+.scroll-list section > a:focus > div {
+  background-color: #00b169;
+  transition: background-color 0.3s ease;
+}
 .scroll-list section > a > div {
 	width: 60px;
+	position: relative;
+	font-size: 0;
 	height: 10px;
 	margin-top: 60px;
 	border-radius: 10px;
 	background-color: rgb(255, 255, 255);
 }
+.scroll-list section > a::after {
+  content: "";
+  font-size: 18px;
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-family);
+}
 
 .scroll-list section > a {
 	text-decoration: none;
+	position: relative;
 }
 
 /* ? Hover 1 profile */
 
-#scroll1:hover::after {
+#scroll1:hover::after,#scroll1:focus-visible::after {
 	content: "Profil";
 	font-family: var(--font-family);
 	font-size: 20px;
@@ -64,7 +100,7 @@
 
 /* ? Hover 2 project */
 
-#scroll2:hover::after {
+#scroll2:hover::after,#scroll2:focus-visible::after {
 	content: "Projets";
 	font-family: var(--font-family);
 	font-size: 20px;
@@ -78,7 +114,7 @@
 }
 /* ? Hover 3 formulaire */
 
-#scroll3:hover::after {
+#scroll3:hover::after,#scroll3:focus-visible::after {
 	content: "Formulaire";
 	font-family: var(--font-family);
 	font-size: 20px;
@@ -218,6 +254,7 @@ input:checked + .slider:before {
 	border-radius: 4px;
 	border-top: solid 6px #00b169;
 }
+
 
 .container-section-profil > section:first-of-type {
 	margin-top: 30px;
