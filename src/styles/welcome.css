@@ -367,7 +367,7 @@ input:checked + .slider:before {
 
 /* ? Responsive mobile */
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 750px) {
 	.title {
 		font-size: 50px;
 		padding: 40px;
@@ -377,17 +377,6 @@ input:checked + .slider:before {
 		margin-top: 8em;
 	}
 }
-@media screen and (max-width: 700px) {
-	.title {
-		font-size: 5em;
-	}
-}
-@media screen and (max-width: 600px) {
-	.title {
-		font-size: 4em;
-	}
-}
-
 @media screen and (max-width: 650px) {
 	.scroll-list {
 		display: none;
