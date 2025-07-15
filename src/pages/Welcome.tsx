@@ -10,15 +10,19 @@ import SplitType from "split-type";
 const Profile = lazy(() => import("../assets/components/Profile"));
 const CardProjects = lazy(() => import("../assets/components/CardProjects"));
 const Formulaire = lazy(() => import("../assets/components/Formulaire"));
+
 function Welcome({ theme, setTheme }: WelcomeProps) {
   const barControls = useAnimation();
+
+  // Automatically scroll to the top of the page on initial load
   useEffect(() => {
     setTimeout(() => {
       window.scrollTo(0, 0);
     }, 50);
   }, []);
+
+  // GSAP animation for the title
   useEffect(() => {
-    // Title
     const split = new SplitType(".title", { types: "chars" });
     const chars = document.querySelectorAll(".char");
     gsap.set(chars, { opacity: 0, y: 20 });
@@ -34,16 +38,18 @@ function Welcome({ theme, setTheme }: WelcomeProps) {
     };
   }, []);
 
-  useEffect(() => {
-    if (window.location.hash) {
-      history.replaceState(
-        null,
-        "",
-        window.location.pathname + window.location.search
-      );
-      window.scrollTo(0, 0);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (window.location.hash) {
+  //     history.replaceState(
+  //       null,
+  //       "",
+  //       window.location.pathname + window.location.search
+  //     );
+  //     window.scrollTo(0, 0);
+  //   }
+  // }, []);
+
+  //  Smooth scroll to a section by ID
   const handleClickAnimation = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
@@ -57,6 +63,7 @@ function Welcome({ theme, setTheme }: WelcomeProps) {
     triggerOnce: false,
   });
 
+  // Control animation visibility of the info bar for mobile et desktop
   useEffect(() => {
     const isMobile = window.innerWidth <= 430;
     if (isMobile) {
@@ -70,6 +77,7 @@ function Welcome({ theme, setTheme }: WelcomeProps) {
     }
   }, [barInView, barControls]);
 
+  // Animation states for the info bar
   const barVariants = {
     hidden: { opacity: 0, scaleX: 0, originX: 0 },
     visible: {
@@ -81,7 +89,7 @@ function Welcome({ theme, setTheme }: WelcomeProps) {
       },
     },
   };
-
+  // Animation to scroll continuously
   useEffect(() => {
     const content = document.querySelector(".ticker-content");
     if (content) {
