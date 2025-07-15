@@ -86,6 +86,15 @@
 .container-formulaire > div > h3 {
 	font-size: 42px;
 }
+#message-form {
+	display: inline-block;
+	width:60%;
+	height: auto;
+	padding:10px;
+ background-color: rgba(255, 72, 72, 0.627);
+ color: white;
+ margin: 0 auto;
+}
 
 @media screen and (max-width: 440px) {
 	.container-formulaire > form {
