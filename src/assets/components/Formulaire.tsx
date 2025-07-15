@@ -11,7 +11,7 @@ function Formulaire() {
     message: "",
   });
 
-  // function de récuperation d'information
+  // function recovery information
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
