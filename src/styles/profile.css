@@ -98,7 +98,7 @@
 		margin-bottom: 10em;
 		width: 90%;
 	}
-	.container-text-profil {
+		.container-text-profil {
 		margin: 0 auto;
 		justify-items: center;
 	}
@@ -115,5 +115,20 @@
 	.container-link {
 		gap: 10px;
 		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.container-profil {
+		flex-direction: column;
+	}	.container-text-profil {
+		margin: 0 auto;
+		justify-items: center;
+	}
+	.container-text-profil > p {
+		margin-top: 0em;
+	}
+	.container-text-profil > h2 {
+		text-align: center;
 	}
 }
