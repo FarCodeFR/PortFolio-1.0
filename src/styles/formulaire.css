@@ -101,3 +101,20 @@
 		padding: 10px;
 	}
 }
+
+@media screen and (min-width: 450px) {
+	.container-formulaire > form  {
+		& button {
+		margin: 40% auto;
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.container-formulaire > form  {
+		& button {
+		margin: 20% auto;
+		}
+	}
+}
+

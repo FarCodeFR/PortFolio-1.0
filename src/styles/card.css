@@ -201,6 +201,23 @@
 
 /* ? Responsive */
 
+@media screen and (max-width: 1100px ) {
+	.container-card-projects {
+		min-width: 50%;
+	}
+}
+@media screen and (max-width: 800px ) {
+	.container-card-projects {
+		min-width: 60%;
+	}
+}
+@media screen and (max-width: 500px ) {
+	.container-card-projects {
+		min-width: 80%;
+	}
+}
+
+
 @media screen and (max-width: 430px) {
 	.container-placement-cards {
 		flex-wrap: nowrap;
